@@ -4,8 +4,9 @@ import CalcController from './controllers/CalcController.js';
 const routes = express.Router();
 const calcController = new CalcController();
 
-routes.post('/calcule', function(req, res) {
-  calcController.calcule
-});
+routes.post('/sum', calcController.sum);
+routes.post('/subtract', calcController.subtract);
+routes.post('/multiply', calcController.multiply);
+routes.post('/divide', calcController.divide);
 
 export default routes;
